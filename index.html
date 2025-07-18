@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🧰Personal Portfolio Website</title>
-    <link rel="icon" href="portpolio logo.png" >
+    <title>Nimalan - Full Stack Developer</title>
+    <link rel="icon" href="portpolio logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Scroll to Top Button -->
     <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
+        <i class="fas fa-chevron-up"></i>
     </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-text">Nimalan</span>
+                    <span class="logo-dot">.</span>
+                </a>
+            </div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#services" class="menu-btn">Services</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#teams" class="menu-btn">Teams</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -36,159 +44,381 @@
         </div>
     </nav>
 
-    <!-- home section start -->
+    <!-- Hero Section -->
     <section class="home" id="home">
+        <div class="home-bg-overlay"></div>
         <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
+            <div class="home-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-1">Hello, I'm</div>
                 <div class="text-2">Nimalan</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <div class="text-3">I'm a <span class="typing"></span></div>
+                <p class="description">Passionate Computer Science student specializing in IoT, creating innovative solutions with modern technologies.</p>
+                <div class="home-buttons">
+                    <a href="#contact" class="btn primary">Get In Touch</a>
+                    <a href="cv.pdf" class="btn secondary" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
             </div>
+            <div class="social-links" data-aos="fade-left" data-aos-delay="500">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- about section start -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">About me</h2>
+            <h2 class="title" data-aos="fade-up">About Me</h2>
             <div class="about-content">
-                <div class="column left">
-                    <img src="nimalan.jpg" alt="">
+                <div class="column left" data-aos="fade-right">
+                    <div class="img-container">
+                        <img src="nimalan.jpg" alt="Nimalan">
+                        <div class="img-overlay"></div>
+                    </div>
                 </div>
-                <div class="column right">
-                    <div class="text">I'm Nimalan and I'm a <span class="typing-2"></span></div>
-                    <p>I am currently pursuing a B.Tech in Computer Science and Engineering with a specialization in IoT at SRM Ramapuram. With a deep passion for technology, I continuously seek to stay updated with the latest innovations and trends in the tech industry, always eager to explore new possibilities.</p>
-                    <a href="cv.pdf">Download CV</a>
+                <div class="column right" data-aos="fade-left">
+                    <div class="text">I'm Nimalan, a <span class="typing-2"></span></div>
+                    <p>I am currently pursuing a B.Tech in Computer Science and Engineering with a specialization in IoT at SRM Ramapuram. With a deep passion for technology, I continuously seek to stay updated with the latest innovations and trends in the tech industry.</p>
+                    <p>My journey in technology has led me to explore various domains including web development, mobile applications, and Internet of Things solutions. I believe in creating meaningful digital experiences that solve real-world problems.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                    
+                    <a href="cv.pdf" class="btn primary" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- services section start -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="max-width">
-            <h2 class="title">My services</h2>
+            <h2 class="title" data-aos="fade-up">My Services</h2>
             <div class="serv-content">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
                     <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web Design</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
+                        <div class="icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="text">Web Development</div>
+                        <p>Creating responsive and modern web applications using latest technologies like React, Node.js, and modern CSS frameworks.</p>
+                        <div class="service-features">
+                            <span>Responsive Design</span>
+                            <span>Modern UI/UX</span>
+                            <span>Performance Optimized</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
                     <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Advertising</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
+                        <div class="icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="text">Mobile Development</div>
+                        <p>Building cross-platform mobile applications with intuitive user interfaces and seamless user experiences.</p>
+                        <div class="service-features">
+                            <span>Cross-Platform</span>
+                            <span>Native Performance</span>
+                            <span>User-Friendly</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
                     <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Apps Design</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
+                        <div class="icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="text">IoT Solutions</div>
+                        <p>Developing innovative Internet of Things solutions that connect devices and create smart, automated systems.</p>
+                        <div class="service-features">
+                            <span>Smart Automation</span>
+                            <span>Device Integration</span>
+                            <span>Data Analytics</span>
+                        </div>
                     </div>
                 </div>
-               </div>
             </div>
         </div>
     </section>
 
-    <!-- skills section start -->
+    <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My skills</h2>
+            <h2 class="title" data-aos="fade-up">My Skills</h2>
             <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills & experiences.</div>
-                    <p>I have a solid background in programming, with experience in C, C++, Java, and Python, and I am dedicated to deepening and broadening my knowledge in these languages. Additionally, I have a good grasp of SQL and Git, which I have utilized in various projects. My skill set also includes design, where I emphasize creating intuitive and visually appealing user interfaces that improve the overall user experience. This blend of technical and design expertise enables me to tackle challenges with a well-rounded approach. My skill set also includes design, where I emphasize creating intuitive and visually appealing user interfaces that improve the overall user experience. This blend of technical and design expertise enables me to tackle challenges with a well-rounded approach.</p>
-                    <a href="#">Read more</a>
+                <div class="column left" data-aos="fade-right">
+                    <div class="text">My Technical Expertise</div>
+                    <p>I have developed a comprehensive skill set in various programming languages and technologies. My expertise spans from frontend development with modern frameworks to backend systems and IoT implementations.</p>
+                    <p>I'm constantly learning and adapting to new technologies, ensuring that my skills remain current with industry standards and best practices.</p>
+                    <div class="skill-categories">
+                        <div class="category">
+                            <h4>Frontend</h4>
+                            <span>HTML, CSS, JavaScript, React</span>
+                        </div>
+                        <div class="category">
+                            <h4>Backend</h4>
+                            <span>Node.js, Python, PHP, MySQL</span>
+                        </div>
+                        <div class="category">
+                            <h4>Tools</h4>
+                            <span>Git, VS Code, Figma</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>70%</span>
+                <div class="column right" data-aos="fade-left">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span class="skill-percentage">85%</span>
                         </div>
-                        <div class="line html"></div>
+                        <div class="skill-bar">
+                            <div class="skill-progress html-css"></div>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>70%</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">75%</span>
                         </div>
-                        <div class="line css"></div>
+                        <div class="skill-bar">
+                            <div class="skill-progress javascript"></div>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>JavaScript</span>
-                            <span>20%</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">80%</span>
                         </div>
-                        <div class="line js"></div>
+                        <div class="skill-bar">
+                            <div class="skill-progress python"></div>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>PHP</span>
-                            <span>30%</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percentage">70%</span>
                         </div>
-                        <div class="line php"></div>
+                        <div class="skill-bar">
+                            <div class="skill-progress react"></div>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>MySQL</span>
-                            <span>50%</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Node.js</span>
+                            <span class="skill-percentage">65%</span>
                         </div>
-                        <div class="line mysql"></div>
+                        <div class="skill-bar">
+                            <div class="skill-progress nodejs"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress mysql"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
-
-    <!-- contact section start -->
-    <section class="contact" id="contact">
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
         <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Feel free to reach out if you'd like to collaborate, discuss opportunities, or share insights about technology and innovation. I'm always open to new ideas and ready to connect!</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Nimalan</div>
+            <h2 class="title" data-aos="fade-up">My Projects</h2>
+            <div class="project-content">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600" alt="E-commerce Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">Chennai, Tamil Nadu</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">nimalanrajaraja@gmail.com</div>
-                            </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
                         </div>
                     </div>
                 </div>
                 
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IoT Smart Home">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart Home IoT System</h3>
+                        <p>An IoT-based home automation system with mobile app control and real-time monitoring.</p>
+                        <div class="project-tech">
+                            <span>Arduino</span>
+                            <span>Python</span>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Task Management App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A collaborative task management application with real-time updates and team collaboration features.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>Socket.io</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- footer section start -->
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="column left" data-aos="fade-right">
+                    <div class="text">Let's Connect</div>
+                    <p>I'm always excited to collaborate on innovative projects and discuss new opportunities. Whether you have a project in mind or just want to connect, feel free to reach out!</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="details">
+                                <div class="label">Name</div>
+                                <div class="value">Nimalan</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="details">
+                                <div class="label">Location</div>
+                                <div class="value">Chennai, Tamil Nadu</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="details">
+                                <div class="label">Email</div>
+                                <div class="value">nimalanrajaraja@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="details">
+                                <div class="label">Phone</div>
+                                <div class="value">+91 XXXXX XXXXX</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="column right" data-aos="fade-left">
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Subject" required>
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <button type="submit" class="btn primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <span>Created By <h1>Nimalan</h1> | <span class="far fa-copyright"></span> 2024 All rights reserved.</span>
+        <div class="max-width">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Nimalan. All rights reserved.</p>
+                    <p>Designed & Developed with <i class="fas fa-heart"></i> by Nimalan</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
