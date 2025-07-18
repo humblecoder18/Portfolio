@@ -662,10 +662,10 @@ section {
 }
 
 .skill-progress.html-css { width: 85%; }
-.skill-progress.javascript { width: 75%; }
+.skill-progress.javascript { width: 45%; }
 .skill-progress.python { width: 80%; }
-.skill-progress.react { width: 70%; }
-.skill-progress.nodejs { width: 65%; }
+.skill-progress.react { width: 40%; }
+.skill-progress.nodejs { width: 45%; }
 .skill-progress.mysql { width: 70%; }
 
 /* Projects Section */
