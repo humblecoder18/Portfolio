@@ -276,24 +276,25 @@ $(document).ready(function(){
         }
     );
 
-    // CV Download function
-    window.downloadCV = function() {
-        // Check if CV file exists
-        const cvFileName = "resume nimalan'.pdf";
-        
-        // Create a temporary link to test if file exists
-        const link = document.createElement('a');
-        link.href = cvFileName;
-        link.download = cvFileName;
-        
-        // Try to download the file
-        try {
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } catch (error) {
-            // If file doesn't exist, show a message
-            alert('CV file is currently being updated. Please contact me directly at nimalanrajaraja@gmail.com for my latest resume.');
-        }
-    };
 });
+
+// CV Download function - moved outside document.ready to be globally accessible
+function downloadCV() {
+    // Check if CV file exists
+    const cvFileName = "resume nimalan'.pdf";
+    
+    // Create a temporary link to test if file exists
+    const link = document.createElement('a');
+    link.href = cvFileName;
+    link.download = cvFileName;
+    
+    // Try to download the file
+    try {
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } catch (error) {
+        // If file doesn't exist, show a message
+        alert('CV file is currently being updated. Please contact me directly at nimalanrajaraja@gmail.com for my latest resume.');
+    }
+}
