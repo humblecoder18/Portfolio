@@ -144,6 +144,12 @@ $(document).ready(function(){
     $(window).scroll(animateCounters);
     animateCounters();
 
+    // CV Download event listeners
+    $('.js-download-cv').click(function(e) {
+        e.preventDefault();
+        downloadCV();
+    });
+
     // Form submission
     $('.contact-form form').submit(function(e) {
         e.preventDefault();
