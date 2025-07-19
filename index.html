@@ -371,30 +371,71 @@
                     </div>
                 </div>
                 
-                <div class="column right" data-aos="fade-left">
-                    <div class="contact-form">
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <input type="text" name="name" placeholder="Your Name" required>
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" placeholder="Your Email" required>
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="subject" placeholder="Subject" required>
-                                <i class="fas fa-tag"></i>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                                <i class="fas fa-comment"></i>
-                            </div>
-                            <button type="submit" class="btn primary">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
-                            </button>
-                        </form>
+               <div class="column right" data-aos="fade-left">
+    <div class="contact-form">
+        <form id="contactForm">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" name="subject" placeholder="Subject" required>
+                <i class="fas fa-tag"></i>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                <i class="fas fa-comment"></i>
+            </div>
+            <button type="submit" class="btn primary">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+            </button>
+            <p id="successMessage" style="color: green; display: none; text-align: center; margin-top: 10px;">
+                Message sent successfully!
+            </p>
+        </form>
+    </div>
+</div>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbwCGpqxbBsZO1vM5MufwctEI6z6rws5YkchnBD6iWs/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(response => {
+      if (response.result === "success") {
+        document.getElementById("successMessage").style.display = "block";
+        form.reset();
+      } else {
+        alert("Error: " + response.error);
+      }
+    })
+    .catch(error => {
+      console.error("Fetch error:", error);
+      alert("Failed to send message. Check console for details.");
+    });
+  });
+</script>
+
                     </div>
                 </div>
             </div>
